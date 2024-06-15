@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
+from app.routers import users
 from app.db.base import init_db
 
 
@@ -10,6 +11,9 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+
+
+app.include_router(users.router, prefix="/api/v1")
 
 
 @app.get("/")
