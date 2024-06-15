@@ -1,0 +1,48 @@
+project/
+│
+├── app/
+│   ├── __init__.py
+│   ├── main.py             # Main FastAPI application instantiation
+│   ├── core/               # Core utilities and configurations
+│   │   ├── __init__.py
+│   │   ├── config.py       # Application configurations
+│   │   └── security.py     # Security-related utilities
+│   ├── db/                 # Database related files
+│   │   ├── __init__.py
+│   │   ├── base.py         # SQLAlchemy base model
+│   │   ├── session.py      # SQLAlchemy session handling
+│   │   └── models/         # Folder for SQLAlchemy models
+│   │       ├── __init__.py
+│   │       ├── user.py     # User model
+│   │       ├── message.py  # Message model
+│   │       ├── comment.py  # Comment model
+│   │       └── post.py     # Post model
+│   ├── schemas/            # Pydantic schemas
+│   │   ├── __init__.py
+│   │   ├── user.py         # User schemas
+│   │   ├── message.py      # Message schemas
+│   │   ├── comment.py      # Comment schemas
+│   │   └── post.py         # Post schemas
+│   ├── crud/               # CRUD operations
+│   │   ├── __init__.py
+│   │   ├── user.py         # CRUD operations for User
+│   │   ├── message.py      # CRUD operations for Message
+│   │   ├── comment.py      # CRUD operations for Comment
+│   │   └── post.py         # CRUD operations for Post
+│   ├── auth/               # Authentication logic
+│   │   ├── __init__.py
+│   │   ├── auth.py         # Authentication functions (login, register)
+│   │   ├── token.py        # Token related functions
+│   │   └── utils.py        # Authentication utilities (e.g., password hashing)
+│   ├── routers/            # API routers
+│   │   ├── __init__.py
+│   │   ├── auth.py         # Authentication routes (login, register)
+│   │   ├── users.py        # User-related routes (profile, CRUD)
+│   │   ├── messages.py     # Message-related routes (CRUD)
+│   │   ├── comments.py     # Comment-related routes (CRUD)
+│   │   └── posts.py        # Post-related routes (CRUD)
+│   └── utils/              # Utility functions
+│       ├── __init__.py
+│       └── helpers.py      # General utility functions (e.g., pagination)
+│
+└── requirements.txt        # Python dependencies
