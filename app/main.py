@@ -14,4 +14,4 @@ app = FastAPI(lifespan=lifespan)
 
 @app.get("/")
 async def read_root():
-    return {"Hello": "World"}
+    return {"Message": "Welcome to DevEleven API!"}
