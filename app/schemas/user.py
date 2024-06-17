@@ -9,3 +9,15 @@ class UserCreate(BaseModel):
     password: str
     user_details: Optional[dict] = None
     user_settings: Optional[dict] = None
+
+    @field_validator("username", "fullname", "password")
+    def not_empty(cls, value):
+        if not value.strip():
+            raise ValueError("must not be empty")
+        return value
+
+    @field_validator("email")
+    def email_not_empty(cls, value):
+        if not value.strip():
+            raise ValueError("must not be empty")
+        return value
